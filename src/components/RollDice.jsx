@@ -4,8 +4,8 @@ import Rules from "./Rules";
 const RollDice = ({ setShowRule, showRule, currentDice, Rolldice, setScore }) => {
     return (
         <HeroSection>
-            <div className="content">
-                <img onClick={Rolldice} src={`/images/dice/dice_${currentDice}.png`} alt="Dice" />
+            <div className="content" onClick={Rolldice}>
+                <img src={`/images/dice/dice_${currentDice}.png`} alt="Dice" />
                 <h1>Click The Dice To Roll</h1>
             </div>
             <div className="btn">
@@ -31,6 +31,8 @@ const HeroSection = styled.div`
         gap: 30px;
         font-weight: 700;
         cursor: pointer;
+        -webkit-tap-highlight-color: transparent; /* For iOS */
+        tap-highlight-color: transparent; /* For Android */
     }
 
     .btn {
@@ -46,11 +48,6 @@ const HeroSection = styled.div`
         .content {
             margin-top: 50px;
         }
-    }
-
-    img {
-        -webkit-tap-highlight-color: transparent; /* For iOS */
-        tap-highlight-color: transparent; /* For Android */
     }
 `;
 

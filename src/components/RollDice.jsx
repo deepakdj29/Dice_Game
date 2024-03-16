@@ -47,6 +47,11 @@ const HeroSection = styled.div`
             margin-top: 50px;
         }
     }
+
+    img {
+        -webkit-tap-highlight-color: transparent; /* For iOS */
+        tap-highlight-color: transparent; /* For Android */
+    }
 `;
 
 const Button = styled.button`

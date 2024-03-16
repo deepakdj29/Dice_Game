@@ -43,6 +43,8 @@ const Box = styled.div`
     background-color: ${(props) => (props.isSelected ? "black" : "white")};
     color: ${(props) => (!props.isSelected ? "black" : "white")};
     transition: 0.3s background ease-in;
+    -webkit-tap-highlight-color: transparent; /* For iOS */
+    tap-highlight-color: transparent; /* For Android */
 
     @media (max-width: 768px) {
         height: 56px;
